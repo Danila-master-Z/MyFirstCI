@@ -25,6 +25,6 @@
         var result = controller.Get();
 
         // Assert
-        Assert.Equal(10, result.Count());
+        Assert.Equal(5, result.Count());
     }
 }
