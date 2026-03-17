@@ -11,7 +11,7 @@ on:
       - "develop"
 
 env: 
-  DOTNET_VER: '9.0.x'
+  DOTNET_VER: '8.0.x'
 
 jobs:
   build-and-test:
