@@ -38,6 +38,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main   # явно переключаемся на ветку main
       - name: Extract version from tag
         id: get_version
         run: |
