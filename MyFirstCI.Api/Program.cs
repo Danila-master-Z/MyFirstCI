@@ -1,10 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
+Console.WriteLine($"Application started in {builder.Environment.EnvironmentName} environment");
 
-// Добавляем Swagger генератор
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Swagger пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Ваши настройки JSON
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ JSON
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
@@ -14,7 +15,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 var app = builder.Build();
 
-// Включаем Swagger только в разработке
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Swagger пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
